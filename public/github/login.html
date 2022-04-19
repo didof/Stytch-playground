@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>You logged in</h1>
+
+    <a
+      href="https://github.com/apps/kelly-ghapp/installations/new/permissions?target_id=57268193"
+    >
+      Install app
+    </a>
+
+    <script>
+      const url = new URL(window.location);
+      const token = url.searchParams.get("token");
+
+      if (!token) window.location.href = "/";
+
+      localStorage.setItem("token", token);
+    </script>
+  </body>
+</html>
